@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -xe
 
 
 # TODO: All commands need to use the user who executed the script with sudo's
@@ -21,9 +21,9 @@ wget https://raw.githubusercontent.com/asebastian/bootstrap/master/files/.zshrc
 source ~/.zshrc
 
 echo "==> Installing go"
-LATEST_GO_VERSION=$(curl 'https://golang.org/VERSION?m=text')
-GO_ARCHIVE="$LATEST_GO_VERSION.linux-amd64.tar.gz"
-GO_ARCHIVE_URL="https://dl.google.com/$GO_ARCHIVE"
+export LATEST_GO_VERSION=$(curl 'https://golang.org/VERSION?m=text')
+export GO_ARCHIVE="$LATEST_GO_VERSION.linux-amd64.tar.gz"
+export GO_ARCHIVE_URL="https://dl.google.com/go/$GO_ARCHIVE"
 
 wget $GO_ARCHIVE_URL
 tar xzf $GO_ARCHIVE
@@ -48,4 +48,5 @@ echo "Installing vim-go dependencies, this may take awhile..."
 git clone https://github.com/fatih/vim-go.git ~/.vim/bundle/vim-go
 vim +GoInstallBinaries +qall
 
+chsh /bin/zsh
 echo "==> Bootstrap complete!"
