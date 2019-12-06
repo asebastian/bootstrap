@@ -44,7 +44,7 @@ wget -q https://raw.githubusercontent.com/asebastian/bootstrap/master/files/.vim
 
 echo "==> Installing vim-go dependencies, this may take awhile..."
 git clone https://github.com/fatih/vim-go.git ~/.vim/bundle/vim-go
-vim +GoInstallBinaries +qall
+vim -c 'GoInstallBinaries' -c 'qa!'
 
 chsh -s /bin/zsh
 echo "==> Bootstrap complete! Log out and log back in to use zsh."
