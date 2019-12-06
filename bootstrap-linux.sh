@@ -16,16 +16,14 @@ apt-get install -q -y zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
 echo "==> Configuring zsh"
-cd ~
-wget https://raw.githubusercontent.com/asebastian/bootstrap/master/files/.zshrc
-source ~/.zshrc
+wget -q https://raw.githubusercontent.com/asebastian/bootstrap/master/files/.zshrc -O ~/.zshrc
 
 echo "==> Installing go"
 export LATEST_GO_VERSION=$(curl 'https://golang.org/VERSION?m=text')
 export GO_ARCHIVE="$LATEST_GO_VERSION.linux-amd64.tar.gz"
 export GO_ARCHIVE_URL="https://dl.google.com/go/$GO_ARCHIVE"
 
-wget $GO_ARCHIVE_URL
+wget -q $GO_ARCHIVE_URL
 tar xzf $GO_ARCHIVE
 mv go /usr/local/
 
@@ -40,9 +38,9 @@ mkdir -p ~/.vim/autoload ~/.vim/bundle && curl -LSso ~/.vim/autoload/pathogen.vi
 git clone https://github.com/elixir-lang/vim-elixir.git ~/.vim/bundle/vim-elixir
 
 mkdir -p ~/.vim/colors
-wget https://raw.githubusercontent.com/jnurmine/Zenburn/master/colors/zenburn.vim -P ~/.vim/colors/
+wget -q https://raw.githubusercontent.com/jnurmine/Zenburn/master/colors/zenburn.vim -P ~/.vim/colors/
 
-wget https://raw.githubusercontent.com/asebastian/bootstrap/master/files/.vimrc
+wget -q https://raw.githubusercontent.com/asebastian/bootstrap/master/files/.vimrc
 
 echo "==> Installing vim-go dependencies, this may take awhile..."
 git clone https://github.com/fatih/vim-go.git ~/.vim/bundle/vim-go
