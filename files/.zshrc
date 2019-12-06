@@ -119,4 +119,4 @@ RPROMPT="[%D{%Y/%m/%d}|%@]"
 export GPG_TTY=$(tty)
 
 # Add default go bin path to path
-export PATH="$PATH:~/go/bin:/usr/local/go/bin"
+export PATH="$PATH:/usr/local/go/bin:~/go/bin"
