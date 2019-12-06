@@ -44,9 +44,9 @@ wget https://raw.githubusercontent.com/jnurmine/Zenburn/master/colors/zenburn.vi
 
 wget https://raw.githubusercontent.com/asebastian/bootstrap/master/files/.vimrc
 
-echo "Installing vim-go dependencies, this may take awhile..."
+echo "==> Installing vim-go dependencies, this may take awhile..."
 git clone https://github.com/fatih/vim-go.git ~/.vim/bundle/vim-go
 vim +GoInstallBinaries +qall
 
-chsh /bin/zsh
-echo "==> Bootstrap complete!"
+chsh -s /bin/zsh
+echo "==> Bootstrap complete! Log out and log back in to use zsh."
