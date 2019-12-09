@@ -108,6 +108,7 @@ alias mycommits='git log --author="Alan Sebastian" --pretty=oneline'
 alias commitsbyauthor="git shortlog -s -n"
 alias linesinrepo="git ls-files | xargs cat | wc -l"
 alias grep="rg"
+alias journalctl="journalctl -o cat"
 
 # examples
 alias tcpdumpheadercaptureexample="sudo tcpdump -n -S -s 0 -A 'tcp dst port 8889'"
