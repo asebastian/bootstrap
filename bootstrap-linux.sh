@@ -46,5 +46,9 @@ echo "==> Installing vim-go dependencies, this may take awhile..."
 git clone https://github.com/fatih/vim-go.git ~/.vim/bundle/vim-go
 vim -c 'GoInstallBinaries' -c 'qa!'
 
+echo "==> Installing fzf from source..."
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
+
 chsh -s /bin/zsh
 echo "==> Bootstrap complete! Log out and log back in to use zsh."

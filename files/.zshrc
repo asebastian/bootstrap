@@ -121,3 +121,9 @@ export GPG_TTY=$(tty)
 
 # Add default go bin path to path
 export PATH="$PATH:/usr/local/go/bin:~/go/bin"
+
+# Set up fzf key bindings and tab completion.
+if [ -e /usr/local/opt/fzf/shell/completion.zsh ]; then
+  source /usr/local/opt/fzf/shell/key-bindings.zsh
+  source /usr/local/opt/fzf/shell/completion.zsh
+fi
