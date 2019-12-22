@@ -123,7 +123,8 @@ export GPG_TTY=$(tty)
 export PATH="$PATH:/usr/local/go/bin:~/go/bin"
 
 # Set up fzf key bindings and tab completion.
-if [ -e /usr/local/opt/fzf/shell/completion.zsh ]; then
-  source /usr/local/opt/fzf/shell/key-bindings.zsh
-  source /usr/local/opt/fzf/shell/completion.zsh
+if [ -e ~/.fzf ]; then
+  _append_to_path ~/.fzf/bin
+  source ~/.fzf/shell/key-bindings.zsh
+  source ~/.fzf/shell/completion.zsh
 fi
