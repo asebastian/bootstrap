@@ -128,3 +128,11 @@ if [ -e ~/.fzf ]; then
   source ~/.fzf/shell/key-bindings.zsh
   source ~/.fzf/shell/completion.zsh
 fi
+
+# Have fzf execute the command selected automatically.
+fzf-history-widget-accept() {
+  fzf-history-widget
+  zle accept-line
+}
+zle     -N   fzf-history-widget-accept
+bindkey '^R' fzf-history-widget-accept
