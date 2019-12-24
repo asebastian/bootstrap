@@ -120,7 +120,7 @@ RPROMPT="[%D{%Y/%m/%d}|%@]"
 export GPG_TTY=$(tty)
 
 # Add default go bin path to path
-export PATH="$PATH:/usr/local/go/bin:~/go/bin"
+export PATH="$PATH:/usr/local/go/bin:~/go/bin:/snap/bin"
 
 # Set up fzf key bindings and tab completion.
 if [ -e ~/.fzf ]; then
