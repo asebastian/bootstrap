@@ -10,6 +10,7 @@ fi
 
 echo "==> Installing basic tools"
 snap install ripgrep --classic
+snap alias ripgrep.rg rg
 
 echo "==> Installing zsh"
 apt-get install -q -y zsh
