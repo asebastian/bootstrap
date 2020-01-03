@@ -39,7 +39,7 @@ ZSH_THEME="risto"
 # DISABLE_LS_COLORS="true"
 
 # Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
+DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
 # ENABLE_CORRECTION="true"
@@ -109,6 +109,7 @@ alias commitsbyauthor="git shortlog -s -n"
 alias linesinrepo="git ls-files | xargs cat | wc -l"
 alias grep="rg"
 alias journalctl="journalctl -o cat"
+alias su="su -"
 
 # examples
 alias tcpdumpheadercaptureexample="sudo tcpdump -n -S -s 0 -A 'tcp dst port 8889'"
