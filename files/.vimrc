@@ -38,6 +38,9 @@ autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
 " Disable vim parenthesis highlighting
 let g:loaded_matchparen=1
 
+" Set 100ms updatetime, so gitgutter is not slow
+set updatetime=100
+
 " Basic styles: line numbers, syntax highlighting, 256 colors for colorschemes to work
 set nu
 syntax on
