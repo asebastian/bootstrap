@@ -115,6 +115,9 @@ alias grep="rg"
 alias journalctl="journalctl -o cat"
 alias su="su -"
 
+# zpool verbose properties
+alias zpoola="zpool list -o health,allocated,capacity,free,freeing,size,fragmentation,ashift,delegation,failmode,guid"
+
 # examples
 alias tcpdumpheadercaptureexample="sudo tcpdump -n -S -s 0 -A 'tcp dst port 8889'"
 
