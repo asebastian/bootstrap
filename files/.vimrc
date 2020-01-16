@@ -23,15 +23,6 @@ set modelines=0
 " Key timeout length
 set timeout timeoutlen=5000 ttimeoutlen=100
 
-" Highlight searches
-" set hlsearch
-
-" Clear the search buffer when hitting return
-" function! MapCR()
-"   nnoremap <cr> :nohlsearch<cr>
-" endfunction
-" call MapCR()
-
 " Filetype-specific indentation
 filetype plugin indent on
 
@@ -53,13 +44,6 @@ syntax on
 set t_Co=256
 set cursorline
 set smartindent
-
-" Powerline settings
-set laststatus=2
-set encoding=utf-8
-let Powerline_symbols = 'fancy'
-let Powerline_colorscheme = "default"
-let g:Powerline_cache_enabled = 1
 
 " Only show cursorline in current window
 augroup cline
@@ -125,28 +109,6 @@ let g:netrw_winsize=20
 let g:netrw_browse_split=4
 let g:netrw_altv=1
 
-" ctrlp - make it taller
-let g:ctrlp_max_height = 20
-" ctrlp - enable mixed mode
-let g:ctrlp_extensions = ['mixed']
-" ctrlp - search by filename instead of path
-let g:ctrlp_by_filename = 1
-" ctrlp - search from top to bottom
-let g:ctrlp_match_window_reversed = 0
-" ctrlp - if file is already open somewhere, switch to it
-let g:ctrlp_switch_buffer = 2
-" ctrlp - sort MRU file list to most-recently-entered-buffer order
-let g:ctrlp_mruf_last_entered = 1
-" ctrlp - search dotfiles
-" let g:ctrlp_dotfiles = 1
-" ctrlp - <c-o> accepts an extra argument (h - horizontal, v - vertical)
-let g:ctrlp_arg_map = 1
-" ctrlp - mapping to open in MRU mode by default
-let g:ctrlp_map = '<C-U>'
-map <C-P> :<C-U>CtrlPMixed<CR>
-" Map CtrlpClearAllCaches to leader-c
-nmap <leader>c :CtrlPClearAllCaches<CR>
-
 " Fix delete key
 set backspace=indent,eol,start
 
@@ -178,11 +140,11 @@ function! SummarizeTabs()
   endtry
 endfunction
 
-""" MACVIM SETTINGS {
-if has("gui_running")
-  set guioptions=egmrt
-endif
-"""
+" ansible
+let g:ansible_unindent_after_newline = 1
+let g:ansible_attribute_highlight = "ob"
+let g:ansible_name_highlight = 'd'
+let g:ansible_extra_keywords_highlight = 1
 
 " Settings for crontab
 autocmd filetype crontab setlocal nobackup nowritebackup
@@ -193,4 +155,3 @@ set re=1
 " Settings for go:
 " Open quickfix windows across bottom of all existing windows
 au FileType qf wincmd J
-

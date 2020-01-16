@@ -39,6 +39,7 @@ mkdir -p ~/.vim/autoload ~/.vim/bundle && curl -LSso ~/.vim/autoload/pathogen.vi
 git clone https://github.com/elixir-lang/vim-elixir.git ~/.vim/bundle/vim-elixir
 git clone https://github.com/vim-airline/vim-airline ~/.vim/bundle/vim-airline
 git clone https://github.com/vim-airline/vim-airline-themes ~/.vim/bundle/vim-airline-themes
+git clone https://github.com/pearofducks/ansible-vim ~/.vim/bundle/ansible-vim
 
 mkdir -p ~/.vim/colors
 wget -q https://raw.githubusercontent.com/jnurmine/Zenburn/master/colors/zenburn.vim -P ~/.vim/colors/
