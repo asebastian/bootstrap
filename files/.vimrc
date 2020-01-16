@@ -57,9 +57,11 @@ augroup END
 " Statusbar
 set statusline=%<%f\ (%{&ft})\ %-4(%m%)%=%-19(%3l,%02c%03V%)
 
+" fonts
 " colorscheme lucius
 " colorscheme Tomorrow-Night-Eighties
 colorscheme zenburn
+let g:airline_powerline_fonts = 1
 
 " tab completion
 set wildmode=longest,list,full
