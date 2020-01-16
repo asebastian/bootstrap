@@ -42,6 +42,12 @@ git clone https://github.com/vim-airline/vim-airline-themes ~/.vim/bundle/vim-ai
 git clone https://github.com/pearofducks/ansible-vim ~/.vim/bundle/ansible-vim
 git clone https://github.com/airblade/vim-gitgutter.git ~/.vim/bundle/vim-gitgutter
 
+echo "==> Installing and configuring git"
+apt-get install -q -y git
+wget -q https://raw.githubusercontent.com/asebastian/bootstrap/master/files/git/.gitconfig
+wget -q https://raw.githubusercontent.com/asebastian/bootstrap/master/files/git/.githelpers
+wget -q https://raw.githubusercontent.com/asebastian/bootstrap/master/files/git/.gitignore
+
 mkdir -p ~/.vim/colors
 wget -q https://raw.githubusercontent.com/jnurmine/Zenburn/master/colors/zenburn.vim -P ~/.vim/colors/
 
