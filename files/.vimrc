@@ -71,7 +71,7 @@ set wildmode=longest,list,full
 set wildmenu
 
 " Longer history
-set history=1000
+set history=10000
 
 " Tabs set @ 2, use spaces instead of tabs
 set ts=2 sts=2 sw=2 expandtab
