@@ -41,6 +41,8 @@ git clone https://github.com/vim-airline/vim-airline ~/.vim/bundle/vim-airline
 git clone https://github.com/vim-airline/vim-airline-themes ~/.vim/bundle/vim-airline-themes
 git clone https://github.com/pearofducks/ansible-vim ~/.vim/bundle/ansible-vim
 git clone https://github.com/airblade/vim-gitgutter.git ~/.vim/bundle/vim-gitgutter
+git clone https://github.com/thaerkh/vim-workspace ~/.vim/bundle/vim-workspace
+git clone https://github.com/wincent/terminus.git ~/.vim/bundle/terminus
 
 echo "==> Installing and configuring git"
 apt-get install -q -y git
