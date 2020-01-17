@@ -151,6 +151,17 @@ let g:ansible_attribute_highlight = "ob"
 let g:ansible_name_highlight = 'd'
 let g:ansible_extra_keywords_highlight = 1
 
+" vim-workspace
+nnoremap <leader>s :ToggleWorkspace<CR>
+let g:workspace_session_directory = $HOME . '/.vim/sessions/'
+let g:workspace_autosave_always = 1
+let g:workspace_session_disable_on_args = 1
+
+" vim-gitgutter
+highlight GitGutterAdd    guifg=#009900 guibg=#383838 ctermfg=2 ctermbg=8
+highlight GitGutterChange guifg=#bbbb00 guibg=#383838 ctermfg=3 ctermbg=8
+highlight GitGutterDelete guifg=#ff2222 guibg=#383838 ctermfg=1 ctermbg=8
+
 " Settings for crontab
 autocmd filetype crontab setlocal nobackup nowritebackup
 
