@@ -162,6 +162,9 @@ highlight GitGutterAdd    guifg=#009900 guibg=#383838 ctermfg=2 ctermbg=8
 highlight GitGutterChange guifg=#bbbb00 guibg=#383838 ctermfg=3 ctermbg=8
 highlight GitGutterDelete guifg=#ff2222 guibg=#383838 ctermfg=1 ctermbg=8
 
+" terminus
+set mouse-=a " disable visual mode on click
+
 " Settings for crontab
 autocmd filetype crontab setlocal nobackup nowritebackup
 
