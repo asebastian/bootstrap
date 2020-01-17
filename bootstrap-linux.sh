@@ -55,6 +55,12 @@ wget -q https://raw.githubusercontent.com/jnurmine/Zenburn/master/colors/zenburn
 
 wget -q https://raw.githubusercontent.com/asebastian/bootstrap/master/files/.vimrc
 
+echo "==> Installing/configuring tmux"
+apt-get install -q -y tmux
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+wget -q https://raw.githubusercontent.com/asebastian/bootstrap/master/files/.tmux.conf
+echo "==> Enter tmux then hit Ctrl-b (leader) + I to automatically configure the plugins"
+
 echo "==> Installing vim-go dependencies, this may take awhile..."
 git clone https://github.com/fatih/vim-go.git ~/.vim/bundle/vim-go
 vim -c 'GoInstallBinaries' -c 'qa!'
