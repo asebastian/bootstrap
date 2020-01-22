@@ -1,6 +1,5 @@
 #!/bin/bash -xe
 
-
 # TODO: All commands need to use the user who executed the script with sudo's
 # home directory, not root.
 if [ "$EUID" -ne 0 ]
@@ -9,14 +8,10 @@ if [ "$EUID" -ne 0 ]
 fi
 
 echo "==> Installing basic tools"
-snap install ripgrep --classic
-snap alias ripgrep.rg rg
-
-echo "==> Installing zsh"
-apt-get install -q -y zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+pacman --noconfirm -S ripgrep zsh vim tmux curl wget git
 
 echo "==> Configuring zsh"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 wget -q https://raw.githubusercontent.com/asebastian/bootstrap/master/files/.zshrc -O ~/.zshrc
 
 echo "==> Installing go"
@@ -30,9 +25,6 @@ mv go /usr/local/
 
 rm $GO_ARCHIVE
 
-echo "==> Installing vim"
-apt-get install vim
-
 echo "==> Configuring vim"
 mkdir -p ~/.vim/autoload ~/.vim/bundle && curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 
@@ -44,22 +36,19 @@ git clone https://github.com/airblade/vim-gitgutter.git ~/.vim/bundle/vim-gitgut
 git clone https://github.com/thaerkh/vim-workspace ~/.vim/bundle/vim-workspace
 git clone https://github.com/wincent/terminus.git ~/.vim/bundle/terminus
 
-echo "==> Installing and configuring git"
-apt-get install -q -y git
+echo "==> Configuring git"
 wget -q https://raw.githubusercontent.com/asebastian/bootstrap/master/files/git/.gitconfig
 wget -q https://raw.githubusercontent.com/asebastian/bootstrap/master/files/git/.githelpers
 wget -q https://raw.githubusercontent.com/asebastian/bootstrap/master/files/git/.gitignore
+wget -q https://raw.githubusercontent.com/asebastian/bootstrap/master/files/.vimrc
 
 mkdir -p ~/.vim/colors
 wget -q https://raw.githubusercontent.com/jnurmine/Zenburn/master/colors/zenburn.vim -P ~/.vim/colors/
 
-wget -q https://raw.githubusercontent.com/asebastian/bootstrap/master/files/.vimrc
-
-echo "==> Installing/configuring tmux"
-apt-get install -q -y tmux
+echo "==> Configuring tmux"
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 wget -q https://raw.githubusercontent.com/asebastian/bootstrap/master/files/.tmux.conf
-echo "==> Enter tmux then hit Ctrl-b (leader) + I to automatically configure the plugins"
+echo "==> !!! Manual Action Required!!! Enter tmux then hit Ctrl-b (leader) + I to automatically configure the plugins"
 
 echo "==> Installing vim-go dependencies, this may take awhile..."
 git clone https://github.com/fatih/vim-go.git ~/.vim/bundle/vim-go
