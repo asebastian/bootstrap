@@ -12,6 +12,7 @@ snap install ripgrep --classic &> /dev/null
 snap alias ripgrep.rg rg &> /dev/null
 
 echo -e "\e[92m==> Installing basic tools available via apt"
+apt-get update &> /dev/null
 apt-get install -q -y zsh vim tmux git wget curl build-essential &> /dev/null
 
 echo -e "\e[33m==> Configuring zsh"
