@@ -24,7 +24,7 @@ export LATEST_GO_VERSION=$(curl 'https://golang.org/VERSION?m=text')
 export GO_ARCHIVE="$LATEST_GO_VERSION.linux-amd64.tar.gz"
 export GO_ARCHIVE_URL="https://dl.google.com/go/$GO_ARCHIVE"
 
-echo -e "\e[34m==> Latest version of go is $LATEST_GO_VERSION, downloading from $GO_ARCHIVE_URL..."
+echo -e "\e[92m==> Latest version of go is $LATEST_GO_VERSION, downloading from $GO_ARCHIVE_URL..."
 wget -q $GO_ARCHIVE_URL &> /dev/null
 
 echo -e "\e[92m==> Installing $LATEST_GO_VERSION to /usr/local/go"
@@ -49,12 +49,12 @@ git clone https://github.com/airblade/vim-gitgutter.git ~/.vim/bundle/vim-gitgut
 git clone https://github.com/thaerkh/vim-workspace ~/.vim/bundle/vim-workspace &> /dev/null
 git clone https://github.com/wincent/terminus.git ~/.vim/bundle/terminus &> /dev/null
 
-echo -e "\e[33m==> Vim: performing final configuration operations"
+echo -e "\e[33m==> Vim: performing final configuration operations prior to vim-go dependency installation"
 mkdir -p ~/.vim/colors
 wget -q https://raw.githubusercontent.com/jnurmine/Zenburn/master/colors/zenburn.vim -P ~/.vim/colors/ &> /dev/null
 wget -q https://raw.githubusercontent.com/asebastian/bootstrap/master/files/.vimrc &> /dev/null
 
-echo -e "\e[33m==> Installing vim-go dependencies, this may take awhile..."
+echo -e "\e[33m==> Vim: Installing vim-go dependencies, this may take awhile..."
 git clone https://github.com/fatih/vim-go.git ~/.vim/bundle/vim-go &> /dev/null
 vim -c 'GoInstallBinaries' -c 'qa!'
 
