@@ -163,9 +163,6 @@ highlight GitGutterAdd    guifg=#009900 guibg=#242424
 highlight GitGutterChange guifg=#bbbb00 guibg=#242424
 highlight GitGutterDelete guifg=#ff2222 guibg=#242424
 
-" terminus
-set mouse-=a " disable visual mode on click
-
 " Settings for crontab
 autocmd filetype crontab setlocal nobackup nowritebackup
 
@@ -175,3 +172,6 @@ set re=1
 " Settings for go:
 " Open quickfix windows across bottom of all existing windows
 au FileType qf wincmd J
+
+" terminus
+au VimEnter * set mouse-=a " disable visual mode on click, has to be run after everything has loaded
