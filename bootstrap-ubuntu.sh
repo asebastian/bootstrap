@@ -37,10 +37,10 @@ rm -rf $GO_ARCHIVE &> /dev/null
 echo -e "\e[33m==> Configuring vim"
 mkdir -p ~/.vim/autoload ~/.vim/bundle &> /dev/null
 
-echo -e "\e[34m==> Vim: configuring pathogen"
+echo -e "\e[33m==> Vim: configuring pathogen"
 curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim &> /dev/null
 
-echo -e "\e[34m==> Vim: installing vim-elixir, vim-airline, vim-airline-themes, ansible-vim, vim-gitgutter, vim-workspace and terminus"
+echo -e "\e[33m==> Vim: installing vim-elixir, vim-airline, vim-airline-themes, ansible-vim, vim-gitgutter, vim-workspace and terminus"
 git clone https://github.com/elixir-lang/vim-elixir.git ~/.vim/bundle/vim-elixir &> /dev/null
 git clone https://github.com/vim-airline/vim-airline ~/.vim/bundle/vim-airline &> /dev/null
 git clone https://github.com/vim-airline/vim-airline-themes ~/.vim/bundle/vim-airline-themes &> /dev/null
@@ -49,12 +49,12 @@ git clone https://github.com/airblade/vim-gitgutter.git ~/.vim/bundle/vim-gitgut
 git clone https://github.com/thaerkh/vim-workspace ~/.vim/bundle/vim-workspace &> /dev/null
 git clone https://github.com/wincent/terminus.git ~/.vim/bundle/terminus &> /dev/null
 
-echo -e "\e[34m==> Vim: performing final configuration operations"
+echo -e "\e[33m==> Vim: performing final configuration operations"
 mkdir -p ~/.vim/colors
 wget -q https://raw.githubusercontent.com/jnurmine/Zenburn/master/colors/zenburn.vim -P ~/.vim/colors/ &> /dev/null
 wget -q https://raw.githubusercontent.com/asebastian/bootstrap/master/files/.vimrc &> /dev/null
 
-echo -e "\e[34m==> Installing vim-go dependencies, this may take awhile..."
+echo -e "\e[33m==> Installing vim-go dependencies, this may take awhile..."
 git clone https://github.com/fatih/vim-go.git ~/.vim/bundle/vim-go &> /dev/null
 vim -c 'GoInstallBinaries' -c 'qa!'
 
@@ -70,7 +70,7 @@ wget -q https://raw.githubusercontent.com/asebastian/bootstrap/master/files/.tmu
 
 echo -e "\e[92m==> Installing fzf from source..."
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf &> /dev/null
-~/.fzf/install &> /dev/null
+~/.fzf/install --key-bindings --completion --update-rc --no-bash --no-fish &> /dev/null
 
 echo -e "\e[33m==> Setting the default shell to zsh for $(whoami)"
 chsh -s /bin/zsh &> /dev/null
