@@ -77,3 +77,4 @@ chsh -s /bin/zsh &> /dev/null
 
 echo -e "\e[96m==> One last thing to do for tmux (optional)! Enter tmux then hit Ctrl-b (leader) + I to automatically configure the plugins"
 echo -e "\e[92m==> Bootstrap complete! Log out and log back in to use zsh."
+echo -e "\e[39m"
