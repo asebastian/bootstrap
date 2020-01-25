@@ -134,14 +134,6 @@ export GPG_TTY=$(tty)
 
 # Add default go bin path to path
 export PATH="$PATH:/usr/local/go/bin:~/go/bin:/snap/bin"
-
-# Set up fzf key bindings and tab completion.
-if [ -e ~/.fzf ]; then
-  _append_to_path ~/.fzf/bin
-  source ~/.fzf/shell/key-bindings.zsh
-  source ~/.fzf/shell/completion.zsh
-fi
-
 # Have fzf execute the command selected automatically.
 # fzf-history-widget-accept() {
 #   fzf-history-widget
