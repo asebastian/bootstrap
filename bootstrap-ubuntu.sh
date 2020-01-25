@@ -16,7 +16,7 @@ apt-get update &> /dev/null
 apt-get install -q -y zsh vim tmux git wget curl build-essential &> /dev/null
 
 echo -e "\e[33m==> Configuring zsh"
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh &> /dev/null)" "" --unattended &> /dev/null
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended &> /dev/null
 wget -q https://raw.githubusercontent.com/asebastian/bootstrap/master/files/.zshrc -O ~/.zshrc &> /dev/null
 
 # Compose the latest go archive url for linux-amd64.
