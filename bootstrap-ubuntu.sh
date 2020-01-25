@@ -31,7 +31,7 @@ echo -e "\e[92m==> Installing $LATEST_GO_VERSION to /usr/local/go"
 tar xzf $GO_ARCHIVE &> /dev/null
 mv go /usr/local/ &> /dev/null
 
-echo -e "\e[34m==> Go toolchain install was successful, removing temporary artifacts"
+echo -e "\e[94m==> Go toolchain install was successful, removing temporary artifacts"
 rm -rf $GO_ARCHIVE &> /dev/null
 
 echo -e "\e[33m==> Configuring vim"
