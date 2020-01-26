@@ -55,9 +55,5 @@
   l = "!. ~/.githelpers && pretty_git_log"
   la = !git l --all
   rb = !git co master && git pull && git co - && git rebase master
-[github]
-  user = asebastian-r7
-[credential]
-	helper = osxkeychain
 [commit]
 	gpgsign = true
