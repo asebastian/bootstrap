@@ -3,7 +3,7 @@
 # TODO: All commands need to use the user who executed the script with sudo's
 # home directory, not root.
 if [ "$EUID" -ne 0 ]
-  then echo "This script needs to be run with sudo or as root, exiting"
+  then echo -e "\e[31m[!] This script needs to be run with sudo or as root, exiting"
   exit
 fi
 
