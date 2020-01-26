@@ -7,6 +7,11 @@ if [ "$EUID" -ne 0 ]
   exit
 fi
 
+echo -e "\e[92m==> Setting locale"
+echo 'LANG=en_US.UTF-8' > /etc/locale.conf
+sed -i '' -e 's/#en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen &> /dev/null || true
+locale-gen &> /dev/null
+
 echo -e "\e[92m==> Installing basic tools"
 pacman --noconfirm -Sy ripgrep zsh vim tmux curl wget git &> /dev/null
 
