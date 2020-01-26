@@ -61,7 +61,6 @@ echo -e "\e[33m==> Vim: Installing vim-go dependencies, this may take awhile..."
 git clone https://github.com/fatih/vim-go.git ~/.vim/bundle/vim-go &> /dev/null
 vim -c 'GoInstallBinaries' -c 'qa!'
 
-
 echo -e "\e[33m==> Configuring git"
 wget -q https://raw.githubusercontent.com/asebastian/bootstrap/master/files/git/.gitconfig &> /dev/null
 wget -q https://raw.githubusercontent.com/asebastian/bootstrap/master/files/git/.githelpers &> /dev/null
