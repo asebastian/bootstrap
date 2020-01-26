@@ -75,8 +75,10 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf &> /dev/null
 ~/.fzf/install --key-bindings --completion --update-rc --no-bash --no-fish &> /dev/null
 
 echo -e "\e[33m==> Setting the default shell to zsh for $(whoami)"
-chsh -s /bin/zsh &> /dev/null
+chsh -s /usr/bin/zsh $(whoami) &> /dev/null
 
 echo -e "\e[96m==> One last thing to do for tmux (optional)! Enter tmux then hit Ctrl-b (leader) + I to automatically configure the plugins"
-echo -e "\e[92m==> Bootstrap complete! Log out and log back in to use zsh."
+echo -e "\e[92m==> Bootstrap complete!"
 echo -e "\e[39m"
+
+exec /usr/bin/zsh --login
