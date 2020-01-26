@@ -2,6 +2,9 @@
 filetype off
 call pathogen#infect()
 
+" Fix weird encoding issue on arch
+set encoding=utf-8
+
 " Make helptags for current plugin bundle
 :Helptags
 
