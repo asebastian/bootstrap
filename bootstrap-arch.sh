@@ -8,7 +8,7 @@ if [ "$EUID" -ne 0 ]
 fi
 
 echo -e "\e[92m==> Installing basic tools"
-pacman --noconfirm -S ripgrep zsh vim tmux curl wget git &> /dev/null
+pacman --noconfirm -Sy ripgrep zsh vim tmux curl wget git &> /dev/null
 
 echo -e "\e[33m==> Configuring zsh"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended &> /dev/null
