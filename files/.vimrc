@@ -98,10 +98,10 @@ nnoremap j gj
 nnoremap k gk
 
 " Disable error keys
-map <Left> :echo "no!"<cr>
-map <Right> :echo "no!"<cr>
-map <Up> :echo "no!"<cr>
-map <Down> :echo "no!"<cr>
+" map <Left> :echo "no!"<cr>
+" map <Right> :echo "no!"<cr>
+" map <Up> :echo "no!"<cr>
+" map <Down> :echo "no!"<cr>
 
 " Map invisibles to leader-l
 nmap <leader>l :set list!<CR>
