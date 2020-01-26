@@ -13,7 +13,7 @@ snap alias ripgrep.rg rg &> /dev/null
 
 echo -e "\e[92m==> Installing basic tools available via apt"
 apt-get update &> /dev/null
-apt-get install -q -y zsh vim tmux git wget curl build-essential apt-file &> /dev/null
+apt-get install -q -y zsh vim tmux git wget curl build-essential apt-file hdparm &> /dev/null
 
 echo -e "\e[92m==> Populating apt-file cache"
 apt-get update &> /dev/null # `apt-get update` needs to be run again to popultate apt-file's cache
