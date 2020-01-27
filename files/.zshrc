@@ -126,6 +126,21 @@ alias zpoola="zpool list -o health,allocated,capacity,free,freeing,size,fragment
 # examples
 alias tcpdumpheadercaptureexample="sudo tcpdump -n -S -s 0 -A 'tcp dst port 8889'"
 
+# Checks to see if vim-workspace has an active
+# session in the current working directory. To
+# be used by vim-airline eventually as a status
+# indicator.
+function isWorkspaceToggled() {
+  cwd=$(pwd)
+  percentedCwd="${cwd//\//%}"
+
+  if [ ! -f ~/.vim/sessions/$percentedCwd ]; then
+    echo "no session found!"
+  else
+    echo "found a session!"
+  fi
+}
+
 # set date on right
 RPROMPT="[%D{%Y/%m/%d}|%@]"
 
