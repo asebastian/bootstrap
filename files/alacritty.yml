@@ -58,6 +58,9 @@ key_bindings:
   - { key: Add,      mods: Control,       action: IncreaseFontSize }
   - { key: Subtract, mods: Control,       action: DecreaseFontSize }
   - { key: Minus,    mods: Control,       action: DecreaseFontSize }
+  - { key: N,        mods: Control,       action: SpawnNewInstance }
+  - { key: Left,     mods: Alt,           chars: "\x1bb"                     }
+  - { key: Right,    mods: Alt,           chars: "\x1bf"                     }
   - { key: L,        mods: Control,       action: ClearLogNotice             }
   - { key: L,        mods: Control,       chars: "\x0c"                      }
   - { key: PageUp,   mods: Shift,         action: ScrollPageUp,   mode: ~Alt }

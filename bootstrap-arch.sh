@@ -73,7 +73,7 @@ wget -q https://raw.githubusercontent.com/asebastian/bootstrap/master/files/.tmu
 
 echo -e "\e[92m==> Installing fzf from source..."
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf &> /dev/null
-~/.fzf/install --key-bindings --completion --update-rc --no-bash --no-fish &> /dev/null
+--key-bindings --completion --update-rc --no-bash --no-fish &> /dev/null
 
 echo -e "\e[33m==> Setting the default shell to zsh for $(whoami)"
 chsh -s /bin/zsh $(whoami) &> /dev/null
