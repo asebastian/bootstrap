@@ -13,7 +13,8 @@ sed -i '' -e 's/#en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen &> /dev/n
 locale-gen &> /dev/null
 
 echo -e "\e[92m==> Installing basic tools"
-pacman --noconfirm -Sy ripgrep zsh vim tmux curl wget git alacritty &> /dev/null
+pacman --noconfirm -Sy ripgrep zsh vim tmux curl wget git alacritty nodejs npm &> /dev/null
+npm install -g linux-window-session-manager &> /dev/null
 
 echo -e "\e[33m==> Configuring zsh"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended &> /dev/null
