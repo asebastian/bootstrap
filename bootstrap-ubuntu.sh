@@ -58,6 +58,7 @@ wget -q https://raw.githubusercontent.com/jnurmine/Zenburn/master/colors/zenburn
 wget -q https://raw.githubusercontent.com/asebastian/bootstrap/master/files/.vimrc &> /dev/null
 
 echo -e "\e[33m==> Vim: Installing vim-go dependencies, this may take awhile..."
+export PATH=/usr/local/go/bin:$PATH
 git clone https://github.com/fatih/vim-go.git ~/.vim/bundle/vim-go &> /dev/null
 vim -c 'GoInstallBinaries' -c 'qa!'
 
