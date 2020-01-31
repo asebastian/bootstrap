@@ -166,6 +166,10 @@ highlight GitGutterAdd    guifg=#009900 guibg=#242424
 highlight GitGutterChange guifg=#bbbb00 guibg=#242424
 highlight GitGutterDelete guifg=#ff2222 guibg=#242424
 
+" vimwiki
+let g:vimwiki_list = [{'path': '~/vimwiki/',
+                      \ 'syntax': 'default', 'ext': '.wiki'}]
+
 " Settings for crontab
 autocmd filetype crontab setlocal nobackup nowritebackup
 

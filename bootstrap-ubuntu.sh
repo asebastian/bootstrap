@@ -51,6 +51,7 @@ git clone https://github.com/pearofducks/ansible-vim ~/.vim/bundle/ansible-vim &
 git clone https://github.com/airblade/vim-gitgutter.git ~/.vim/bundle/vim-gitgutter &> /dev/null
 git clone https://github.com/thaerkh/vim-workspace ~/.vim/bundle/vim-workspace &> /dev/null
 git clone https://github.com/wincent/terminus.git ~/.vim/bundle/terminus &> /dev/null
+git clone https://github.com/vimwiki/vimwiki.git ~/.vim/bundle/vimwiki &> /dev/null
 
 echo -e "\e[33m==> Vim: performing final configuration operations prior to vim-go dependency installation"
 mkdir -p ~/.vim/colors

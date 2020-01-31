@@ -156,3 +156,5 @@ export PATH="$PATH:/usr/local/go/bin:~/go/bin:/snap/bin"
 # }
 # zle     -N   fzf-history-widget-accept
 # bindkey '^R' fzf-history-widget-accept
+
+unsetopt correct_all
