@@ -166,9 +166,12 @@ highlight GitGutterAdd    guifg=#009900 guibg=#242424
 highlight GitGutterChange guifg=#bbbb00 guibg=#242424
 highlight GitGutterDelete guifg=#ff2222 guibg=#242424
 
+" vim-table-mode: markdown-compatible tables
+let g:table_mode_corner='|'
+
 " vimwiki
-let g:vimwiki_list = [{'path': '~/vimwiki/',
-                      \ 'syntax': 'default', 'ext': '.wiki'}]
+let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax': 'markdown', 'ext': '.md'},
+      \ {'path': '~/vimwiki-bpf', 'syntax': 'markdown', 'ext': '.md'} ]
 
 " Settings for crontab
 autocmd filetype crontab setlocal nobackup nowritebackup

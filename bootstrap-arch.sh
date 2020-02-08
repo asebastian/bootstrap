@@ -56,6 +56,7 @@ git clone https://github.com/wincent/terminus.git ~/.vim/bundle/terminus &> /dev
 git clone https://github.com/vimwiki/vimwiki.git ~/.vim/bundle/vimwiki &> /dev/null
 git clone git@github.com:vim-pandoc/vim-pandoc.git ~/.vim/bundle/vim-pandoc &> /dev/null
 git clone https://github.com/vim-pandoc/vim-pandoc-syntax ~/.vim/bundle/vim-pandoc-syntax
+git clone https://github.com/dhruvasagar/vim-table-mode.git ~/.vim/bundle/vim-table-mode
 
 
 echo -e "\e[33m==> Vim: performing final configuration operations prior to vim-go dependency installation"
