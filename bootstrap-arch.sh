@@ -1,10 +1,12 @@
 #!/bin/bash -e
 
-# TODO: All commands need to use the user who executed the script with sudo's
-# home directory, not root.
-if [ "$EUID" -ne 0 ]
-  then echo -e "\e[31m[!] This script needs to be run with sudo or as root, exiting"
-  exit
+# NOTE: THIS SCRIPT IS PRIMARILY FOR PROVISIONING A USER ONCE.
+# WHILE LARGELY IDEMPOTENT, RUNNING REPEATEDLY MAY CAUSE ERRORS.
+
+$(sudo -n bash -c "checking for passwordless sudo")
+if [[ ${?} != "0" ]]; then
+  echo "$(whoami) must have passwordless sudo to execute this script"
+  exit 1
 fi
 
 echo -e "\e[92m==> Setting locale"
