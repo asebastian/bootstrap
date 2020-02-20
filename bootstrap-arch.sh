@@ -74,6 +74,7 @@ echo -e "\e[33m==> Configuring git"
 wget -q https://raw.githubusercontent.com/asebastian/bootstrap/master/files/git/.gitconfig &> /dev/null
 wget -q https://raw.githubusercontent.com/asebastian/bootstrap/master/files/git/.githelpers &> /dev/null
 wget -q https://raw.githubusercontent.com/asebastian/bootstrap/master/files/git/.gitignore &> /dev/null
+git clone https://github.com/joe-skb7/cscope-maps.git ~/.vim/bundle/cscope-maps &> /dev/null
 
 echo -e "\e[33m==> Configuring tmux"
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm &> /dev/null

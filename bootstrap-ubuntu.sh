@@ -79,6 +79,7 @@ git clone https://github.com/wincent/terminus.git ~/.vim/bundle/terminus &> /dev
 git clone https://github.com/vimwiki/vimwiki.git ~/.vim/bundle/vimwiki &> /dev/null
 git clone git@github.com:vim-pandoc/vim-pandoc.git ~/.vim/bundle/vim-pandoc &> /dev/null
 git clone https://github.com/dhruvasagar/vim-table-mode.git ~/.vim/bundle/vim-table-mode &> /dev/null
+git clone https://github.com/joe-skb7/cscope-maps.git ~/.vim/bundle/cscope-maps &> /dev/null
 
 echo -e "\e[$CONFIG_COLOR==> Vim: performing final configuration operations prior to vim-go dependency installation"
 mkdir -p ~/.vim/colors
