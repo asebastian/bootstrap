@@ -77,7 +77,7 @@ git clone https://github.com/airblade/vim-gitgutter.git ~/.vim/bundle/vim-gitgut
 git clone https://github.com/thaerkh/vim-workspace ~/.vim/bundle/vim-workspace &> /dev/null
 git clone https://github.com/wincent/terminus.git ~/.vim/bundle/terminus &> /dev/null
 git clone https://github.com/vimwiki/vimwiki.git ~/.vim/bundle/vimwiki &> /dev/null
-git clone git@github.com:vim-pandoc/vim-pandoc.git ~/.vim/bundle/vim-pandoc &> /dev/null
+git clone https://github.com/vim-pandoc/vim-pandoc.git ~/.vim/bundle/vim-pandoc &> /dev/null
 git clone https://github.com/dhruvasagar/vim-table-mode.git ~/.vim/bundle/vim-table-mode &> /dev/null
 git clone https://github.com/joe-skb7/cscope-maps.git ~/.vim/bundle/cscope-maps &> /dev/null
 
