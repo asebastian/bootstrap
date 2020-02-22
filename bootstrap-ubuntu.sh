@@ -15,7 +15,7 @@ function show_help() {
   echo "There's not much to this. If you want to install go, use --with-go or -g"
 }
 
-$(sudo -n bash -c "checking for passwordless sudo")
+HAS_PASSWORDLESS_SUDO=$(sudo -n /bin/bash -c 'echo "checking for passwordless sudo"' 2>&1)
 if [[ ${?} != "0" ]]; then
   echo "$(whoami) must have passwordless sudo to execute this script"
   exit 1

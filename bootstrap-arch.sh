@@ -3,7 +3,7 @@
 # NOTE: THIS SCRIPT IS PRIMARILY FOR PROVISIONING A USER ONCE.
 # WHILE LARGELY IDEMPOTENT, RUNNING REPEATEDLY MAY CAUSE ERRORS.
 
-$(sudo -n bash -c "checking for passwordless sudo")
+HAS_PASSWORDLESS_SUDO=$(sudo -n /bin/bash -c 'echo "checking for passwordless sudo"' 2>&1)
 if [[ ${?} != "0" ]]; then
   echo "$(whoami) must have passwordless sudo to execute this script"
   exit 1
