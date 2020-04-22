@@ -79,6 +79,7 @@ git clone https://github.com/joe-skb7/cscope-maps.git ~/.vim/bundle/cscope-maps 
 echo -e "\e[33m==> Configuring tmux"
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm &> /dev/null
 wget -q https://raw.githubusercontent.com/asebastian/bootstrap/master/files/.tmux.conf &> /dev/null
+wget -q https://raw.githubusercontent.com/asebastian/bootstrap/master/files/.tmux.chomp_buffer.conf &> /dev/null
 
 echo -e "\e[92m==> Installing fzf from source..."
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf &> /dev/null

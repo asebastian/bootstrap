@@ -103,6 +103,7 @@ wget -q https://raw.githubusercontent.com/asebastian/bootstrap/master/files/git/
 echo -e "\e[$CONFIG_COLOR==> Configuring tmux..."
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm &> /dev/null
 wget -q https://raw.githubusercontent.com/asebastian/bootstrap/master/files/.tmux.conf &> /dev/null
+wget -q https://raw.githubusercontent.com/asebastian/bootstrap/master/files/.tmux.chomp_buffer.conf &> /dev/null
 
 echo -e "\e[$INSTALL_COLOR==> Installing fzf from source..."
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf &> /dev/null
