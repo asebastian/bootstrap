@@ -126,7 +126,7 @@ hi OverLength ctermbg=none cterm=none
 match OverLength /\%>100v/
 fun! s:LongLineHLToggle()
  if !exists('w:longlinehl')
-  let w:longlinehl = matchadd('ErrorMsg', '.\%>80v', 0)
+  let w:longlinehl = matchadd('ErrorMsg', '.\%>100v', 0)
   echo "Long lines highlighted"
  else
   call matchdelete(w:longlinehl)
