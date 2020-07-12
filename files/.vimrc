@@ -120,6 +120,21 @@ let g:netrw_altv=1
 " Fix delete key
 set backspace=indent,eol,start
 
+" Highlight rows longer than 100 characters
+nnoremap <Leader>H :call<SID>LongLineHLToggle()<cr>
+hi OverLength ctermbg=none cterm=none
+match OverLength /\%>100v/
+fun! s:LongLineHLToggle()
+ if !exists('w:longlinehl')
+  let w:longlinehl = matchadd('ErrorMsg', '.\%>80v', 0)
+  echo "Long lines highlighted"
+ else
+  call matchdelete(w:longlinehl)
+  unl w:longlinehl
+  echo "Long lines unhighlighted"
+ endif
+endfunction
+
 " Set tabstop, tabstop, softtabstop and shiftwidth to the same value (stolen from vimcast #2)
 command! -nargs=* Stab call Stab()
 function! Stab()
