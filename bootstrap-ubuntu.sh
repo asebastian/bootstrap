@@ -33,7 +33,7 @@ sudo snap alias ripgrep.rg rg &> /dev/null
 
 echo -e "\e[$INSTALL_COLOR==> Installing basic tools available via apt"
 sudo apt-get update &> /dev/null
-sudo apt-get install -q -y zsh vim tmux git wget curl build-essential apt-file hdparm &> /dev/null
+sudo apt-get install -q -y zsh vim tmux git wget curl build-essential apt-file hdparm net-tools &> /dev/null
 
 echo -e "\e[$CONFIG_COLOR==> Populating apt-file cache"
 sudo apt-get update &> /dev/null # `apt-get update` needs to be run again to popultate apt-file's cache
