@@ -106,6 +106,15 @@ nnoremap k gk
 " Map invisibles to leader-l
 nmap <leader>l :set list!<CR>
 
+" Map :GoDoc to leader-d
+nmap <leader>d :GoDoc<CR>
+
+" Map :GoVet to leader-v
+nmap <leader>v :GoVet<CR>
+
+" Map :GoDescribe to leader-i
+nmap <leader>i :GoDescribe<CR>
+
 " Use textmate symbols for tabstops and EOLs
 set listchars=tab:▸\ ,eol:¬
 
