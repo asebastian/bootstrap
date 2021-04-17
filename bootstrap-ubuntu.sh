@@ -83,6 +83,7 @@ git clone https://github.com/joe-skb7/cscope-maps.git ~/.vim/bundle/cscope-maps 
 git clone https://github.com/evanleck/vim-svelte.git ~/.vim/bundle/vim-svelte &> /dev/null
 git clone https://github.com/pangloss/vim-javascript.git ~/.vim/bundle/vim-javascript &> /dev/null
 git clone https://github.com/HerringtonDarkholme/yats.vim.git ~/.vim/bundle/yats.vim &> /dev/null
+git clone https://github.com/neoclide/coc.nvim ~/.vim/bundle/coc.vim &> /dev/null
 
 echo -e "\e[$CONFIG_COLOR==> Vim: performing final configuration operations prior to vim-go dependency installation"
 mkdir -p ~/.vim/colors
