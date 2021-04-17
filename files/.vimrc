@@ -210,8 +210,13 @@ autocmd filetype crontab setlocal nobackup nowritebackup
 set re=1
 
 " Settings for go:
+"
 " Open quickfix windows across bottom of all existing windows
 au FileType qf wincmd J
+"
+" Stop goimports from running at every save]
+let g:go_fmt_command = 'gofmt'
+let g:go_imports_autosave = 0
 
 " terminus
 au VimEnter * set mouse-=a " disable visual mode on click, has to be run after everything has loaded
